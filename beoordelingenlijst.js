@@ -1,31 +1,25 @@
+function calculate(i) {
+	var i = '';
+	if(i >= 0 && i <= 49) {
+		i = 'onvoldoende';
+	} else if(i >= 50 && i <= 59) {
+		i = 'matig';
+	} else if(i >= 60 && i <= 74) {
+		i = 'voldoende';
+	} else if(i >= 75 && i <= 100) {
+		i = 'goed';
+	} else {
+		i = 'NaN';
+	}
+	return i;
+}
+
 function result() {
 	var cijfer = document.getElementById('cijfer').value;
-
-	if(cijfer >= 0 && cijfer <= 49) {
-		document.getElementById('resultaat').innerHTML = 'Het cijfer is ' + cijfer + ' en is dus onvoldoende';
-	} else if(cijfer >= 50 && cijfer <= 59) {
-		document.getElementById('resultaat').innerHTML = 'Het cijfer is ' + cijfer + ' en is dus matig';
-	} else if(cijfer >= 60 && cijfer <= 74) {
-		document.getElementById('resultaat').innerHTML = 'Het cijfer is ' + cijfer + ' en is dus voldoende';
-	} else if(cijfer >= 75 && cijfer <= 100) {
-		document.getElementById('resultaat').innerHTML = 'Het cijfer is ' + cijfer + ' en is dus goed';
-	} else {
-		document.getElementById('resultaat').innerHTML = cijfer + ' bestaat niet';
-	}
+	document.getElementById('resultaat').innerHTML += '<br>Het cijfer is ' + cijfer + ' en is dus ' + calculate(cijfer);
 }
 
 function resultaat() {
 	var cijfer = document.getElementById('cijfers').value;
-
-	if(cijfer >= 0 && cijfer <= 49) {
-		document.getElementById('resultaat').innerHTML = 'De beoordeling is onvoldoende, want het cijfer is ' + cijfer + '.';
-	} else if(cijfer >= 50 && cijfer <= 59) {
-		document.getElementById('resultaat').innerHTML = 'De beoordeling is matig, want het cijfer is ' + cijfer + '.';
-	} else if(cijfer >= 60 && cijfer <= 74) {
-		document.getElementById('resultaat').innerHTML = 'De beoordeling is voldoende, want het cijfer is ' + cijfer + '.';
-	} else if(cijfer >= 75 && cijfer <= 100) {
-		document.getElementById('resultaat').innerHTML = 'De beoordeling is goed, want het cijfer is ' + cijfer + '.';
-	} else {
-		document.getElementById('resultaat').innerHTML = cijfer + ' bestaat niet';
-	}
+	document.getElementById('resultaat').innerHTML += '<br>De beoordeling is ' + calculate(cijfer) + ', want het cijfer is ' + cijfer;
 }
