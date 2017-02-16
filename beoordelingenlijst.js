@@ -3,19 +3,19 @@
 //Var en functie namen beter defineren
 
 function calculate(i) {
-	var i = '';
+	var a = '';
 	if(i >= 0 && i <= 49) {
-		i = 'onvoldoende';
+		a = 'onvoldoende';
 	} else if(i >= 50 && i <= 59) {
-		i = 'matig';
+		a = 'matig';
 	} else if(i >= 60 && i <= 74) {
-		i = 'voldoende';
+		a = 'voldoende';
 	} else if(i >= 75 && i <= 100) {
-		i = 'goed';
+		a = 'goed';
 	} else {
-		i = 'NaN';
+		a = 'NaN';
 	}
-	return i;
+	return a;
 }
 
 function result() {

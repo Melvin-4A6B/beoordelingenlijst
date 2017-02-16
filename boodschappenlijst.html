@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Boodschappen Lijstje</title>
+	<style>
+	</style>
+</head>
+<body>
+	<input type="text" id="lijst" value="brood;melk;water;chips;patat">
+	<button onclick="boodschappen()">Laat Boodschappenlijstje zien</button>
+	<div>
+		<ol id="content"></ol>
+	</div>
+
+	<script>
+		function boodschappen() {
+			var lijst = document.getElementById('lijst').value;
+			var boodschappenArray = [];
+			boodschappenArray = lijst.split(";");
+			var i = 0;
+			
+			for(i = 0; i < boodschappenArray.length; i++) {
+				document.getElementById('content').innerHTML += '<li>' + boodschappenArray[i] + '</li>';
+			}
+		}
+	</script>
+</body>
+</html>
