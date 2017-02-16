@@ -1,3 +1,7 @@
+//Goed om functie met paramater te gebruiken
+//Code is duidelijk
+//Var en functie namen beter defineren
+
 function calculate(i) {
 	var i = '';
 	if(i >= 0 && i <= 49) {
